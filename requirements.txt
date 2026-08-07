@@ -1,0 +1,5 @@
+segno==1.6.6
+opencv-python
+numpy
+Pillow
+tqdm

@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# IntelliJ / Android Studio
+.idea/
+
+# Android
+.gradle/
+local.properties
+captures/
+.cxx/
+
+**/build/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Python Environment
+.env
+
+# Android APKs
+*.apk
+*.aab
+
+# Temporary
+*.tmp
+
+# Output folders
+output/
+received/
+
+# Compiled files
+*.class
+
+# Android Signing
+*.jks
+*.keystore
+
+# Generated files
+received/
