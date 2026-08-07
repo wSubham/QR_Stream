@@ -266,7 +266,7 @@ Downloads/QRStream
 
 ## Transfer Completed
 
-![Completed](assets/generated_qr_code.jpeg)
+![Completed](assets/show_store_position.jpeg)
 
 ---
 
@@ -289,7 +289,7 @@ Downloads/QRStream
 | Integrity Verification | CRC32                  |
 | Communication          | Offline                |
 | File Reconstruction    | Ordered Chunk Assembly |
-| Output Location        | Downloads/QRStream     |
+| Output Location        | Download/QRStream     |
 
 ---
 
