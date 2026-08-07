@@ -1,6 +1,10 @@
-# QRStream
+<h1 align="center">QR Stream</h1>
 
-> **Offline File Transfer System using Dynamic QR Codes**
+<p align="center">
+Offline File Transfer System using Dynamic QR Codes
+</p>
+
+<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Android](https://img.shields.io/badge/Android-Kotlin-green)
@@ -9,25 +13,27 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+</p>
 ---
 
 ## Table of Contents
 
-- Overview
-- Key Features
-- System Architecture
-- Workflow
-- QRStream Protocol
-- Python Sender
-- Android Receiver
-- Runtime Execution
-- Screenshots
-- Performance
-- Installation
-- Project Structure
-- Technologies Used
-- Contributors
-- License
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Workflow](#workflow)
+- [QRStream Protocol](#qrstream-protocol)
+- [Python Sender](#python-sender)
+- [Android Receiver](#android-receiver)
+- [Runtime Execution](#runtime-execution)
+- [Screenshots](#screenshots)
+- [Performance](#performance)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ---
 
@@ -228,28 +234,62 @@ Downloads/QRStream
 
 # Screenshots
 
-Add your screenshots here:
+## Sender Interface
 
-- Sender Interface
-- Receiver Waiting
-- Receiving Progress
-- Missing Chunk Detection
-- Transfer Completed
-- Saved File in Downloads
+![Sender Interface](assets/vs_code.jpeg)
+
+---
+
+## Waiting for QR
+
+![Waiting](assets/wait_for_start.jpeg)
+
+---
+
+## Transfer Started
+
+![Started](assets/starting.jpeg)
+
+---
+
+## Receiving Data
+
+![Receiving](assets/receiving_start.jpeg)
+
+---
+
+## Missing Chunk Detection
+
+![Missing](assets/missing_chunks_show.jpeg)
+
+---
+
+## Transfer Completed
+
+![Completed](assets/generated_qr_code.jpeg)
+
+---
+
+## File Saved
+
+![Saved](assets/saved_sample4_file.jpeg)
 
 ---
 
 # Performance
 
-| Parameter | Value |
-|-----------|-------|
-| Chunk Size | 700 Bytes |
-| QR Generator | Segno |
-| QR Detection | Google ML Kit |
-| Camera | CameraX |
-| Integrity Check | CRC32 |
-| Communication | Offline |
-| Platform | Python + Android |
+| Parameter              | Value                  |
+| ---------------------- | ---------------------- |
+| Chunk Size             | 700 Bytes              |
+| QR Encoding            | Base64                 |
+| QR Generator           | Segno                  |
+| Error Correction       | Medium (M)             |
+| QR Detection           | Google ML Kit          |
+| Camera Framework       | CameraX                |
+| Integrity Verification | CRC32                  |
+| Communication          | Offline                |
+| File Reconstruction    | Ordered Chunk Assembly |
+| Output Location        | Downloads/QRStream     |
 
 ---
 
@@ -258,7 +298,7 @@ Add your screenshots here:
 ## Clone
 
 ```bash
-git clone https://github.com/<username>/QR_Stream.git
+git clone https://github.com/wSubham/QR_Stream.git
 cd QR_Stream
 ```
 
@@ -290,7 +330,14 @@ python -m sender.app
 
 Open `receiver_android` in Android Studio.
 
-Build and install the APK on an Android device.
+
+Build the APK
+
+Install it on your Android device
+
+Grant Camera Permission
+
+Start scanning QR codes
 
 ---
 
@@ -298,14 +345,36 @@ Build and install the APK on an Android device.
 
 ```text
 QR_Stream
+│
+├── assets/
+│
 ├── docs/
+│
 ├── output/
+│
 ├── received/
-├── receiver_android/
-│   └── app/
+│
 ├── samples/
+│
 ├── sender/
-├── tests/
+│   ├── app.py
+│   ├── config.py
+│   ├── file_reader.py
+│   ├── file_splitter.py
+│   ├── packet_builder.py
+│   ├── serializer.py
+│   ├── qr_generator.py
+│   ├── qr_display.py
+│   ├── transmission_engine.py
+│   ├── session.py
+│   └── protocol.py
+│
+├── receiver_android/
+│   ├── app/
+│   ├── gradle/
+│   ├── build.gradle
+│   └── settings.gradle
+│
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
@@ -316,20 +385,49 @@ QR_Stream
 
 # Technologies Used
 
+Desktop
+
 - Python
+- OpenCV
+- Segno
+- NumPy
+- Pillow
+
+Android
+
 - Kotlin
 - Jetpack Compose
 - CameraX
 - Google ML Kit
-- OpenCV
-- Segno
-- NumPy
+
+Protocol
+
+- Base64
+- CRC32
+- UUID
+- Binary Serialization
 
 ---
 
-# Contributors
+# Author
 
-- Subham Das
+**Subham Das**
+
+---
+
+# Acknowledgements
+
+This project makes use of the following open-source technologies and libraries:
+
+- OpenCV
+- Google ML Kit
+- CameraX
+- Jetpack Compose
+- Segno
+- NumPy
+- Pillow
+
+Their excellent work made the development of QRStream possible.
 
 ---
 
